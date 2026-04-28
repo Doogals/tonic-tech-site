@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Sharp tools for your desktop. Small, focused Windows utilities by Tonic Tech." />
+  <title>Tonic Tech — Sharp tools for your desktop</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <nav>
+    <a class="nav-logo" href="#">⚡ TONIC TECH</a>
+    <div class="nav-links">
+      <a href="#apps">Apps</a>
+      <a href="#feedback">Feedback</a>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <h1>Sharp tools for<br /><span class="accent">your desktop.</span></h1>
+    <p class="subtitle">Small, focused Windows utilities.</p>
+    <a class="btn-primary" href="#apps">Browse Apps ↓</a>
+  </section>
+
+  <section class="products" id="apps">
+    <p class="section-label">Apps</p>
+    <div class="product-grid">
+
+      <a class="product-card" href="app-launcher.html">
+        <div class="product-card-icon">🚀</div>
+        <div class="product-card-name">App Launcher</div>
+        <div class="product-card-desc">A customizable widget bar that lives on your desktop. Launch your apps, files, and URLs in one click.</div>
+        <div class="product-card-footer">
+          <span class="product-card-price">Free · $5/mo unlimited</span>
+          <span class="product-card-cta">Learn more →</span>
+        </div>
+      </a>
+
+      <div class="product-card coming-soon">
+        <div class="product-card-icon">🔧</div>
+        <div class="product-card-name">More coming soon</div>
+        <div class="product-card-desc">New utilities in development. Check back soon.</div>
+        <div class="product-card-footer">
+          <span class="product-card-price">&nbsp;</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="feedback" id="feedback">
+    <div class="feedback-inner">
+      <h2>💬 Got feedback?</h2>
+      <p class="subtitle">Ideas, bugs, feature requests — send it all. It genuinely helps.</p>
+      <textarea id="feedback-msg" placeholder="What's on your mind?"></textarea>
+      <button class="btn-primary btn-sm" id="feedback-btn" onclick="sendFeedback()">Send Feedback</button>
+      <p class="feedback-msg" id="feedback-status"></p>
+    </div>
+  </section>
+
+  <footer>
+    <span>© 2026 Tonic Tech &nbsp;·&nbsp; <a href="mailto:tonictech.inquiry@gmail.com">Contact</a></span>
+  </footer>
+
+  <script>
+    async function sendFeedback() {
+      const textarea = document.getElementById('feedback-msg');
+      const btn = document.getElementById('feedback-btn');
+      const status = document.getElementById('feedback-status');
+      const message = textarea.value.trim();
+
+      if (!message) { textarea.focus(); return; }
+
+      btn.disabled = true;
+      btn.textContent = 'Sending...';
+      status.textContent = '';
+      status.className = 'feedback-msg';
+
+      try {
+        const res = await fetch('https://app-launcher-proxy.dougbreaultjr.workers.dev/feedback', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ message }),
+        });
+
+        if (res.ok) {
+          textarea.style.display = 'none';
+          btn.style.display = 'none';
+          status.textContent = '✓ Thanks — message received.';
+          status.className = 'feedback-msg success';
+        } else {
+          throw new Error('Server error');
+        }
+      } catch {
+        btn.disabled = false;
+        btn.textContent = 'Send Feedback';
+        status.textContent = 'Something went wrong. Try again.';
+        status.className = 'feedback-msg error';
+      }
+    }
+  </script>
+
+</body>
+</html>
