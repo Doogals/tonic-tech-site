@@ -27,6 +27,7 @@
         <a class="btn-primary" href="https://github.com/Doogals/AppLauncher/releases/download/v0.3.0/App.Launcher_0.3.0_x64_en-US.msi">Download Free</a>
         <a class="btn-secondary" href="https://tonictechapps.lemonsqueezy.com/checkout/buy/e14ee8eb-1a79-42a8-85a7-30aa23e66c61">Buy License — $5/mo</a>
       </div>
+      <p class="download-count" id="dl-count"></p>
     </div>
     <div class="product-hero-img">
       <img src="assets/screenshot-app-launcher.png" alt="App Launcher widget running on a Windows desktop" />
@@ -112,6 +113,12 @@
     <span>© 2026 Tonic Tech &nbsp;·&nbsp; <a href="mailto:tonictech.inquiry@gmail.com">Contact</a></span>
   </footer>
 
+<script>
+  fetch('https://app-launcher-proxy.dougbreaultjr.workers.dev/downloads')
+    .then(r => r.json())
+    .then(d => { if (d.total) document.getElementById('dl-count').textContent = '↓ ' + d.total.toLocaleString() + ' downloads'; })
+    .catch(() => {});
+</script>
 <!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "49b55953413747db808e430eebfdd382"}'></script><!-- End Cloudflare Web Analytics -->
 </body>
 </html>

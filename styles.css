@@ -249,6 +249,7 @@ footer a:hover { color: #e07b39; }
   margin-bottom: 28px;
 }
 .btn-row { display: flex; gap: 12px; flex-wrap: wrap; }
+.download-count { color: #555; font-size: 13px; margin-top: 10px; }
 .product-hero-img { flex: 1; text-align: center; }
 .product-hero-img img {
   max-width: 100%;
