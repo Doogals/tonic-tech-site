@@ -1,11 +1,11 @@
 {
-  "version": "0.3.0",
-  "notes": "App Launcher v0.3.0",
-  "pub_date": "2026-05-04T23:43:10.637Z",
+  "version": "0.3.1",
+  "notes": "App Launcher v0.3.1",
+  "pub_date": "2026-05-05T23:57:03.581Z",
   "platforms": {
     "windows-x86_64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSdHZBOC9TZlBrWDdtYzlMUjRVODZyV09TODl2dmtCUC9qYXJpeFpnSFBOK0dmZXZKRWhlL1UrRjUvTVlmOCtnejYxVS9mSnhZTGlCcDZIdnp4Y0FiYU42K2xaamUxbndZPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzc3OTQyNjA5CWZpbGU6YXBwMDMwLm1zaQp3UHhBWkt1RXIwOFhPZG9lRFllQWVkZXJwaHF5WWJCVEhGTnE4cWk4UG4xb01jMnhPWmVlZnMwLzNYVm00KzhMWWZNKytVTHpud0sxanZnNDY5dFdEQT09Cg==",
-      "url": "https://github.com/Doogals/AppLauncher/releases/download/v0.3.0/App.Launcher_0.3.0_x64_en-US.msi"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSdHZBOC9TZlBrWHp3TzJmZDNIVTlBTUg0SUFUTHZQa2hZODlKYWlxMGl6aXcySUdlSHJTQzR1TVNrWGttZXphTHdYa21MVkh5bGRQTW1RdVFVNGRqcktqNTRHUnNSN3dNPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzc4MDI1ODAxCWZpbGU6YXBwLm1zaQowSXIrTnVCSnBubFpsaGJnb2JTTFBvaHU4K3VJaXREcGwrdFhJMjl1bXhnc1VxTzFrZkhWZFY4N3FGSmNrVlcxQWgwT3htdU1Fbk9qSHRpeFhUK0tDZz09Cg==",
+      "url": "https://github.com/Doogals/AppLauncher/releases/download/v0.3.1/App.Launcher_0.3.1_x64_en-US.msi"
     }
   }
 }
