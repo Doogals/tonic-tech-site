@@ -2,124 +2,18 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="App Launcher — a customizable widget bar for Windows. Launch apps, files, folders, and URLs in one click." />
-  <title>App Launcher — Tonic Tech</title>
-  <link rel="icon" type="image/png" href="assets/logo.png" />
-  <link rel="stylesheet" href="styles.css" />
+  <meta http-equiv="refresh" content="0; url=takeoff.html" />
+  <link rel="canonical" href="takeoff.html" />
+  <title>TakeOff — Tonic Tech</title>
 </head>
 <body>
-
-  <nav>
-    <a class="nav-logo" href="index.html"><img src="assets/logo.png" alt="Tonic Tech" class="nav-logo-img" /> TONIC TECH</a>
-    <div class="nav-links">
-      <a href="index.html#apps">Apps</a>
-      <a href="blog/">Blog</a>
-      <a href="index.html#feedback">Feedback</a>
-    </div>
-  </nav>
-
-  <section class="product-hero">
-    <div class="product-hero-text">
-      <a class="back" href="index.html">← All Apps</a>
-      <h1>🚀 App Launcher</h1>
-      <p class="desc">A customizable widget bar that lives on your Windows desktop. Group your most-used apps, files, folders, and URLs — launch anything in one click.</p>
-      <div class="btn-row">
-        <a class="btn-primary" href="https://github.com/Doogals/AppLauncher/releases/download/v0.4.0/App.Launcher_0.4.0_x64_en-US.msi">Download Free</a>
-        <a class="btn-secondary" href="https://tonictechapps.lemonsqueezy.com/checkout/buy/692bf539-a89a-4ff8-9da7-5c93507c21af">Buy License — $5/mo</a>
-      </div>
-      <p class="download-count" id="dl-count"></p>
-    </div>
-    <div class="product-hero-img">
-      <img src="assets/screenshot-app-launcher.png" alt="App Launcher widget running on a Windows desktop" />
-    </div>
-  </section>
-
-  <section class="features">
-    <p class="section-label">Features</p>
-    <div class="feature-grid">
-
-      <div class="feature">
-        <div class="feature-icon">📁</div>
-        <h3>Group your tools</h3>
-        <p>Organize apps, files, folders, and URLs into named groups with custom emoji icons.</p>
-      </div>
-
-      <div class="feature">
-        <div class="feature-icon">⚡</div>
-        <h3>One-click launch</h3>
-        <p>Open anything instantly from the widget bar. No digging through menus or taskbars.</p>
-      </div>
-
-      <div class="feature">
-        <div class="feature-icon">🖱️</div>
-        <h3>Always there</h3>
-        <p>Sits on your desktop, out of the way but always accessible. Drag it anywhere you like.</p>
-      </div>
-
-      <div class="feature">
-        <div class="feature-icon">🌐</div>
-        <h3>URLs & Bookmarks</h3>
-        <p>Add websites and browser bookmarks alongside your apps and files.</p>
-      </div>
-
-      <div class="feature">
-        <div class="feature-icon">🪟</div>
-        <h3>Windows Apps</h3>
-        <p>Full support for modern Windows Store apps, not just traditional .exe files.</p>
-      </div>
-
-      <div class="feature">
-        <div class="feature-icon">🎨</div>
-        <h3>Customizable</h3>
-        <p>Pick any emoji as a group icon. Name and arrange your groups however you want.</p>
-      </div>
-
-    </div>
-  </section>
-
-  <section class="pricing">
-    <div class="pricing-inner">
-      <p class="section-label">Pricing</p>
-      <div class="pricing-grid">
-
-        <div class="pricing-card">
-          <h3>Free</h3>
-          <div class="price">$0 <span>forever</span></div>
-          <ul>
-            <li>1 group</li>
-            <li>All item types</li>
-            <li>Full widget features</li>
-          </ul>
-          <a class="btn-primary" href="https://github.com/Doogals/AppLauncher/releases/download/v0.4.0/App.Launcher_0.4.0_x64_en-US.msi">Download</a>
-        </div>
-
-        <div class="pricing-card paid">
-          <h3>Unlimited</h3>
-          <div class="price">$5 <span>/ month</span></div>
-          <ul>
-            <li>Unlimited groups</li>
-            <li>All item types</li>
-            <li>Full widget features</li>
-            <li>Supports development</li>
-          </ul>
-          <a class="btn-primary" href="https://tonictechapps.lemonsqueezy.com/checkout/buy/692bf539-a89a-4ff8-9da7-5c93507c21af">Buy License</a>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <footer>
-    <span>© 2026 Tonic Tech &nbsp;·&nbsp; <a href="mailto:tonictech.inquiry@gmail.com">Contact</a></span>
-  </footer>
-
-<script>
-  fetch('https://app-launcher-proxy.dougbreaultjr.workers.dev/downloads')
-    .then(r => r.json())
-    .then(d => { if (d.total) document.getElementById('dl-count').textContent = '↓ ' + d.total.toLocaleString() + ' downloads'; })
-    .catch(() => {});
-</script>
-<!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "49b55953413747db808e430eebfdd382"}'></script><!-- End Cloudflare Web Analytics -->
+  <!--
+    App Launcher was renamed to TakeOff. The Netlify _redirects rule
+    (/app-launcher.html -> /takeoff.html, 301) handles this on the live
+    site, but this stub exists so this page never shows stale branding
+    if it's ever reached a way that skips Netlify's redirect processing
+    (direct file access, a cached copy, a local preview server, etc.).
+  -->
+  <p>This page has moved. Redirecting to <a href="takeoff.html">TakeOff</a>…</p>
 </body>
 </html>
