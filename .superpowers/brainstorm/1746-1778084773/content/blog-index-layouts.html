@@ -1,0 +1,223 @@
+<style>
+  .mockup-wrap {
+    background: #111;
+    border: 1px solid #2a2a2a;
+    border-radius: 10px;
+    overflow: hidden;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    color: #e0e0e0;
+    font-size: 13px;
+  }
+  .m-nav {
+    background: #0d0d0d;
+    border-bottom: 1px solid #222;
+    padding: 0 20px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 11px;
+  }
+  .m-nav-logo { color: #e07b39; font-weight: 700; letter-spacing: 1px; }
+  .m-nav-links { color: #666; display: flex; gap: 16px; }
+  .m-nav-links span { color: #e07b39; }
+  .m-body { padding: 20px 24px; }
+  .m-label { color: #555; font-size: 9px; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 12px; }
+  .m-title { color: #fff; font-weight: 700; margin-bottom: 6px; }
+  .m-sub { color: #666; font-size: 11px; margin-bottom: 16px; }
+
+  /* Layout A - Card Grid */
+  .card-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  .blog-card {
+    background: #1a1a1a;
+    border: 1px solid #2a2a2a;
+    border-radius: 8px;
+    padding: 14px;
+  }
+  .blog-card-tag { color: #e07b39; font-size: 9px; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 6px; }
+  .blog-card-title { color: #fff; font-weight: 600; font-size: 12px; margin-bottom: 4px; line-height: 1.4; }
+  .blog-card-excerpt { color: #666; font-size: 10px; line-height: 1.5; margin-bottom: 8px; }
+  .blog-card-meta { color: #444; font-size: 9px; }
+
+  /* Layout B - List */
+  .blog-list { display: flex; flex-direction: column; gap: 0; }
+  .blog-row {
+    padding: 12px 0;
+    border-bottom: 1px solid #1e1e1e;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  .blog-row:last-child { border-bottom: none; }
+  .blog-row-left { flex: 1; }
+  .blog-row-tag { color: #e07b39; font-size: 9px; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 4px; }
+  .blog-row-title { color: #fff; font-weight: 600; font-size: 12px; margin-bottom: 3px; }
+  .blog-row-excerpt { color: #666; font-size: 10px; line-height: 1.5; }
+  .blog-row-date { color: #444; font-size: 9px; white-space: nowrap; padding-top: 2px; }
+
+  /* Layout C - Featured + List */
+  .blog-featured {
+    background: #1a1a1a;
+    border: 1px solid #2a2a2a;
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 12px;
+    display: flex;
+    gap: 16px;
+    align-items: center;
+  }
+  .blog-featured-img {
+    width: 80px;
+    height: 56px;
+    background: #222;
+    border-radius: 6px;
+    border: 1px solid #333;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+  }
+  .blog-featured-badge { color: #e07b39; font-size: 9px; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 4px; }
+  .blog-featured-title { color: #fff; font-weight: 700; font-size: 13px; margin-bottom: 4px; }
+  .blog-featured-excerpt { color: #666; font-size: 10px; line-height: 1.5; }
+  .blog-sub-list { display: flex; flex-direction: column; gap: 0; }
+  .blog-sub-row {
+    padding: 8px 0;
+    border-bottom: 1px solid #1a1a1a;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .blog-sub-row:last-child { border-bottom: none; }
+  .blog-sub-title { color: #ccc; font-size: 11px; }
+  .blog-sub-date { color: #444; font-size: 9px; }
+</style>
+
+<h2>Blog index layout options</h2>
+<p class="subtitle">Which structure fits best for tonic-tech.com?</p>
+
+<div class="cards">
+
+  <div class="card" data-choice="a" onclick="toggleSelect(this)">
+    <div class="card-image" style="padding: 16px;">
+      <div class="mockup-wrap">
+        <div class="m-nav">
+          <span class="m-nav-logo">⚡ TONIC TECH</span>
+          <div class="m-nav-links"><span>Apps</span><span style="color:#e07b39">Blog</span><span>Feedback</span></div>
+        </div>
+        <div class="m-body">
+          <div class="m-label">Blog</div>
+          <div class="m-title" style="font-size:15px">Tips, builds & Windows tricks</div>
+          <div class="m-sub">Weekly posts on productivity and desktop tooling</div>
+          <div class="card-grid">
+            <div class="blog-card">
+              <div class="blog-card-tag">Productivity</div>
+              <div class="blog-card-title">Stop digging through your taskbar — there's a better way</div>
+              <div class="blog-card-excerpt">How a simple widget bar changed the way I work on Windows 11...</div>
+              <div class="blog-card-meta">May 6, 2026 · 4 min read</div>
+            </div>
+            <div class="blog-card">
+              <div class="blog-card-tag">Windows</div>
+              <div class="blog-card-title">5 Windows 11 shortcuts most people don't know</div>
+              <div class="blog-card-excerpt">Beyond Win+D and Alt+Tab — the hidden shortcuts worth learning...</div>
+              <div class="blog-card-meta">Apr 29, 2026 · 3 min read</div>
+            </div>
+            <div class="blog-card" style="opacity:0.4">
+              <div class="blog-card-title">Coming next week...</div>
+            </div>
+            <div class="blog-card" style="opacity:0.4">
+              <div class="blog-card-title">Coming next week...</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>A — Card Grid</h3>
+      <p>Visually rich, scannable. Each post gets equal weight. Looks great once you have 4+ posts.</p>
+    </div>
+  </div>
+
+  <div class="card" data-choice="b" onclick="toggleSelect(this)">
+    <div class="card-image" style="padding: 16px;">
+      <div class="mockup-wrap">
+        <div class="m-nav">
+          <span class="m-nav-logo">⚡ TONIC TECH</span>
+          <div class="m-nav-links"><span>Apps</span><span style="color:#e07b39">Blog</span><span>Feedback</span></div>
+        </div>
+        <div class="m-body">
+          <div class="m-label">Blog</div>
+          <div class="m-title" style="font-size:15px">Tips, builds & Windows tricks</div>
+          <div class="m-sub">Weekly posts on productivity and desktop tooling</div>
+          <div class="blog-list">
+            <div class="blog-row">
+              <div class="blog-row-left">
+                <div class="blog-row-tag">Productivity</div>
+                <div class="blog-row-title">Stop digging through your taskbar — there's a better way</div>
+                <div class="blog-row-excerpt">How a simple widget bar changed the way I work on Windows 11...</div>
+              </div>
+              <div class="blog-row-date">May 6</div>
+            </div>
+            <div class="blog-row">
+              <div class="blog-row-left">
+                <div class="blog-row-tag">Windows</div>
+                <div class="blog-row-title">5 Windows 11 shortcuts most people don't know</div>
+                <div class="blog-row-excerpt">Beyond Win+D and Alt+Tab — the hidden ones worth learning...</div>
+              </div>
+              <div class="blog-row-date">Apr 29</div>
+            </div>
+            <div class="blog-row" style="opacity:0.3">
+              <div class="blog-row-left">
+                <div class="blog-row-title">More coming soon...</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>B — Clean List</h3>
+      <p>Minimal, fast to scan. Works well with just 1–2 posts and scales infinitely. Reads like a publication.</p>
+    </div>
+  </div>
+
+  <div class="card" data-choice="c" onclick="toggleSelect(this)">
+    <div class="card-image" style="padding: 16px;">
+      <div class="mockup-wrap">
+        <div class="m-nav">
+          <span class="m-nav-logo">⚡ TONIC TECH</span>
+          <div class="m-nav-links"><span>Apps</span><span style="color:#e07b39">Blog</span><span>Feedback</span></div>
+        </div>
+        <div class="m-body">
+          <div class="m-label">Blog</div>
+          <div class="m-title" style="font-size:15px">Tips, builds & Windows tricks</div>
+          <div class="m-sub">Weekly posts on productivity and desktop tooling</div>
+          <div class="blog-featured">
+            <div class="blog-featured-img">🚀</div>
+            <div>
+              <div class="blog-featured-badge">Latest · Productivity</div>
+              <div class="blog-featured-title">Stop digging through your taskbar — there's a better way</div>
+              <div class="blog-featured-excerpt">How a simple widget bar changed the way I work on Windows 11...</div>
+            </div>
+          </div>
+          <div class="blog-sub-list">
+            <div class="blog-sub-row">
+              <div class="blog-sub-title">5 Windows 11 shortcuts most people don't know</div>
+              <div class="blog-sub-date">Apr 29</div>
+            </div>
+            <div class="blog-sub-row" style="opacity:0.4">
+              <div class="blog-sub-title">More coming soon...</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>C — Featured + List</h3>
+      <p>Latest post gets a spotlight, older posts listed below. Great for drawing attention to the newest content.</p>
+    </div>
+  </div>
+
+</div>
