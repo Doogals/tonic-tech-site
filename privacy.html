@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="What TakeOff collects, what it never collects, and how to turn it off." />
+  <title>Privacy — Tonic Tech</title>
+  <link rel="icon" type="image/png" href="assets/logo.png" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <nav>
+    <a class="nav-logo" href="index.html"><img src="assets/logo.png" alt="Tonic Tech" class="nav-logo-img" /> TONIC TECH</a>
+    <div class="nav-links">
+      <a href="index.html#apps">Apps</a>
+      <a href="blog/">Blog</a>
+      <a href="index.html#feedback">Feedback</a>
+    </div>
+  </nav>
+
+  <section class="post-header">
+    <a class="post-back" href="index.html">← Home</a>
+    <h1 class="post-h">Privacy</h1>
+    <p class="post-meta">TakeOff for Windows · Last updated 18 October 2026</p>
+  </section>
+
+  <section class="post-body">
+
+    <p class="post-p">
+      TakeOff runs on your computer. Your groups, the apps you launch, the files
+      you open and the websites you visit stay on your machine. They are never
+      uploaded, and I have no way to see them.
+    </p>
+
+    <p class="post-p">
+      There are three narrow exceptions, described in full below: anonymous
+      usage counts, license activation, and feedback you choose to send.
+    </p>
+
+    <h2 class="post-h">Anonymous usage data</h2>
+
+    <p class="post-p">
+      Once a week, TakeOff sends a short message so I can see how many people
+      are using it and which features are worth continuing to build. It contains
+      only numbers. This is the entire message:
+    </p>
+
+    <ul class="post-p">
+      <li><strong>A random ID</strong> created when you install TakeOff. It is not
+        derived from your computer, your name or your license. It is stored in
+        TakeOff's settings file, and deleting that file gives you a new one.</li>
+      <li><strong>The TakeOff version</strong> you are running.</li>
+      <li><strong>Whether you have a license</strong> — true or false. Not which license.</li>
+      <li><strong>Your Windows version number</strong>, for example 10.0.26200.</li>
+      <li><strong>How many groups and items</strong> you have, and how many of each
+        item type (app, file, web address, folder, script, Steam game, Store app).</li>
+      <li><strong>How many groups</strong> are set to launch at startup, how many are
+        detached, and how many items have a saved window position.</li>
+    </ul>
+
+    <h2 class="post-h">What is never collected</h2>
+
+    <p class="post-p">
+      The rule TakeOff follows is <strong>counts, never content</strong>. The
+      message says you have twelve apps. It cannot say which ones.
+    </p>
+
+    <ul class="post-p">
+      <li>Group names</li>
+      <li>File paths, file names or folder names</li>
+      <li>Web addresses or bookmarks</li>
+      <li>Which specific apps or games you launch</li>
+      <li>Your name, username or computer name</li>
+      <li>Your license key</li>
+      <li>Anything you type into TakeOff</li>
+    </ul>
+
+    <p class="post-p">
+      You can confirm this yourself rather than taking my word for it. In TakeOff,
+      open <strong>Settings → Privacy → See exactly what's sent</strong>. It shows
+      the actual message from your own installation, built by the same code that
+      sends it.
+    </p>
+
+    <h2 class="post-h">Turning it off</h2>
+
+    <p class="post-p">
+      <strong>Settings → Privacy → Share anonymous usage data.</strong> Switching
+      it off stops the next message immediately — there is nothing to restart and
+      no delay. TakeOff works identically either way.
+    </p>
+
+    <h2 class="post-h">Licenses</h2>
+
+    <p class="post-p">
+      If you buy a license, activating it sends your license key and a label for
+      the computer you are activating on, so the same license can be recognised
+      the next time and so you are not locked out if you reinstall Windows. That
+      label is your computer name plus a short code derived from your
+      motherboard. Purchases are handled by Lemon Squeezy, who process your
+      payment details — I never see them.
+    </p>
+
+    <h2 class="post-h">Feedback</h2>
+
+    <p class="post-p">
+      If you send feedback from inside TakeOff, I receive your message, your
+      TakeOff version, and the same computer label used for licensing, so I can
+      match a report to an order. Including your email address is optional and
+      only used to reply.
+    </p>
+
+    <p class="post-p">
+      You can also tick a box to attach your configuration, which helps me
+      reproduce a problem. That attachment includes your group and item names so
+      the setup can be rebuilt. It is sent <em>only</em> when you tick that box,
+      and your license key is masked. Nothing is attached if you leave it
+      unticked.
+    </p>
+
+    <h2 class="post-h">How long it is kept</h2>
+
+    <p class="post-p">
+      Weekly usage records are deleted after about six months. Feedback messages
+      stay in my email until I delete them. License records are kept for as long
+      as the license is active.
+    </p>
+
+    <h2 class="post-h">Your data</h2>
+
+    <p class="post-p">
+      Usage data is anonymous, so I cannot connect it to you or pull it out on
+      request — there is nothing linking that random ID to your identity. For
+      license or feedback data, email me and I will remove it.
+    </p>
+
+    <h2 class="post-h">Questions</h2>
+
+    <p class="post-p">
+      <a href="mailto:tonictech.inquiry@gmail.com">tonictech.inquiry@gmail.com</a>.
+      If something here is unclear or you think it is wrong, please tell me.
+    </p>
+
+  </section>
+
+  <footer>
+    <span>© 2026 Tonic Tech &nbsp;·&nbsp; <a href="mailto:tonictech.inquiry@gmail.com">Contact</a> &nbsp;·&nbsp; <a href="privacy.html">Privacy</a></span>
+  </footer>
+
+<!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "49b55953413747db808e430eebfdd382"}'></script><!-- End Cloudflare Web Analytics -->
+</body>
+</html>
