@@ -256,11 +256,11 @@ footer a:hover { color: #e07b39; }
 .btn-row { display: flex; gap: 12px; flex-wrap: wrap; }
 .download-count { color: #555; font-size: 13px; margin-top: 10px; }
 .product-hero-img { flex: 1; text-align: center; }
+/* The screenshot is a transparent PNG cut to the widget's own rounded shape,
+   so the shadow follows its outline (drop-shadow) rather than a box around it. */
 .product-hero-img img {
   max-width: 100%;
-  border-radius: 10px;
-  border: 1px solid #2a2a2a;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+  filter: drop-shadow(0 8px 24px rgba(0, 0, 0, 0.5));
 }
 
 /* ── FEATURES ── */
