@@ -29,7 +29,7 @@
         <a class="btn-primary" href="https://github.com/Doogals/AppLauncher/releases/download/v0.6.7/TakeOff_0.6.7_x64_en-US.msi">Download Free</a>
         <a class="btn-secondary" href="https://tonictechapps.lemonsqueezy.com/checkout/buy/692bf539-a89a-4ff8-9da7-5c93507c21af">Buy License — $5/mo</a>
       </div>
-      <p class="download-count">Current version: v0.6.7 &nbsp;·&nbsp; <span id="dl-count"></span></p>
+      <p class="download-count">Current version: v0.6.7<span id="dl-count"></span></p>
     </div>
     <div class="product-hero-img">
       <img src="assets/takeoff-widget-v2.png" alt="The TakeOff widget with AI, Work and Gaming groups" />
@@ -117,10 +117,27 @@
   </footer>
 
 <script>
+  // The count is shown only once it reaches DL_THRESHOLD. Below that, five
+  // quick clicks in the bottom-left corner of the window reveal it anyway.
+  const DL_THRESHOLD = 500;
+  let dlTotal = null;
+  function showDlCount() {
+    document.getElementById('dl-count').textContent =
+      '  ·  ↓ ' + dlTotal.toLocaleString() + ' downloads';
+  }
   fetch('https://app-launcher-proxy.dougbreaultjr.workers.dev/downloads')
     .then(r => r.json())
-    .then(d => { if (d.total) document.getElementById('dl-count').textContent = '↓ ' + d.total.toLocaleString() + ' downloads'; })
+    .then(d => { if (d.total) { dlTotal = d.total; if (dlTotal >= DL_THRESHOLD) showDlCount(); } })
     .catch(() => {});
+
+  let cornerClicks = [];
+  document.addEventListener('click', e => {
+    if (e.clientX > 60 || e.clientY < window.innerHeight - 60) return;
+    const now = Date.now();
+    cornerClicks = cornerClicks.filter(t => now - t < 2000);
+    cornerClicks.push(now);
+    if (cornerClicks.length >= 5 && dlTotal !== null) { showDlCount(); cornerClicks = []; }
+  });
 </script>
 <!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "49b55953413747db808e430eebfdd382"}'></script><!-- End Cloudflare Web Analytics -->
 </body>
